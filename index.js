@@ -12,7 +12,7 @@ clearNotif.addEventListener("click", () => {
     const afterDot = window.getComputedStyle(ele, "::after");
     //
     // afterDot.removeProperty("display");
-    ele.style.setProperty("--after", "transparent");
+    ele.style.setProperty("--after-display", "none");
     counter.textContent = 0;
   });
 });

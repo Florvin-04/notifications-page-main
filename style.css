@@ -157,9 +157,9 @@ ul[role="list"] > li:hover {
   background-color: var(--after, red);
   position: absolute;
   border-radius: 1rem;
-  /* display: var(--display-afater, none); */
   margin-left: 0.4rem;
   bottom: 4px;
+  display: var(--after-display, inline-block);
 }
 
 .content > p:not(.ago) {
