@@ -1,0 +1,215 @@
+/* reset  */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+  padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* custom properties */
+
+:root {
+  --Primary-red: 1 90% 64%;
+  --Primary-blue: 219 85% 26%;
+
+  --Neutral-White: 0 0% 100%;
+  --Neutral-Very-light-grayish-blue: 210 60% 98%;
+  --Neutral-Light-grayish-blue-1: 211 68% 94%;
+  --Neutral-Light-grayish-blue-2: 205 33% 90%;
+  --Neutral-Grayish-blue: 219 14% 63%;
+  --Neutral-Dark-grayish-blue: 219 12% 42%;
+  --Neutral-Very-dark-blue: 224 21% 14%;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+.container {
+  padding: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notif-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.notif-counter {
+  color: hsl(var(--Neutral-White));
+  background-color: hsl(var(--Primary-blue));
+  /* aspect-ratio: 1; */
+  width: 1.8rem;
+  border-radius: 0.3rem;
+  text-align: center;
+}
+
+.clear-notif {
+  color: hsl(var(--Neutral-Grayish-blue));
+  font-size: 0.8rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.notif-list {
+  font-size: 0.6rem;
+}
+
+.notif-list > ul {
+  display: grid;
+  gap: 0.5rem;
+}
+
+ul[role="list"] > li {
+  display: flex;
+  /* justify-content: center; */
+  align-items: flex-start;
+  padding: 0.8rem 2rem 0.8rem 1rem;
+  border-radius: 0.5rem;
+}
+ul[role="list"] > li:hover {
+  background-color: hsl(var(--Neutral-Light-grayish-blue-2));
+}
+
+.avatar {
+  width: 2rem;
+  margin-right: 1rem;
+}
+
+.playingChess {
+  aspect-ratio: 1;
+  width: 3rem;
+
+  margin-left: auto;
+}
+
+.unread {
+  background-color: hsl(var(--Neutral-Light-grayish-blue-1));
+}
+
+.dot {
+  position: relative;
+}
+.dot::after {
+  content: "";
+  aspect-ratio: 1;
+  width: 7px;
+  /* height: 10px; */
+  background-color: var(--after, red);
+  position: absolute;
+  border-radius: 1rem;
+  /* display: var(--display-afater, none); */
+  margin-left: 0.4rem;
+  bottom: 4px;
+}
+
+.content > p:not(.ago) {
+  color: hsl(var(--Neutral-Dark-grayish-blue));
+}
+
+.name {
+  margin-right: 0.2rem;
+}
+
+.name:hover {
+  color: hsl(var(--Primary-blue));
+}
+.agenda {
+  color: hsl(var(--Neutral-Very-dark-blue));
+  font-weight: 800;
+}
+
+.chess-club {
+  color: hsl(var(--Primary-blue));
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: 900;
+}
+
+.ago {
+  color: hsl(var(--Neutral-Grayish-blue));
+}
+
+.private-message {
+  margin-top: 0.5rem;
+  border: 1px solid hsl(var(--Neutral-Light-grayish-blue-1));
+  padding: 1rem;
+  cursor: pointer;
+}
+
+@media (min-width: 400px) {
+  body {
+    width: 100%;
+  }
+
+  .container {
+    box-shadow: 1px 3px 32px -14px rgba(0, 0, 0, 0.75);
+    /* background-color: red; */
+    max-width: 60%;
+    /* height: 10; */
+    margin-inline: auto;
+  }
+}
